@@ -1,0 +1,4 @@
+#!/bin/sh
+
+dir="test_output/$(ls -1 test_output |tail -n1)"
+touch $dir/pcap/tcpdump.pcap
