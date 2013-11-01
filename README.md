@@ -9,6 +9,7 @@ It has 2 modes:
 connect to a new network it will do the fingerprint
 
 ##### Fingerprinting steps:
+```
 _test_pcap
 	records a 15s PCAP in the background (tcpdump)
 _test_ifconfig
@@ -32,7 +33,7 @@ _test_explor_traceroute
 	runs traceroute to arbitrary private IP ranges (traceroute)
 _test_explor_scan
 	runs an nmap scan on the local /24 IP range (nmap)
-
+```
 
 ### Example usage: Run fingerprinting on wlan0
 
