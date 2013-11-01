@@ -1,0 +1,16 @@
+#!/bin/sh
+
+oa=""
+while true; do
+	case $1 in
+		-oA) oa=$2; shift ;;
+		*) shift ;;
+	esac
+	[ $# -eq 1 ] && break
+done
+
+if [ X"$oa" != X"" ]; then
+	touch $oa.xml
+	touch $oa.gnmap
+	touch $oa.nmap
+fi

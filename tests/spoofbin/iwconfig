@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "eth0      no wireless extensions.
+"
