@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # autoscan - automatic fingerprint of visited networks
-# 2013, Laurent Ghigonis <laurent@gouloum.fr>
+# 2013, Laurent Ghigonis at P1 Security <laurent@p1sec.com>
 
 import sys
 import os
