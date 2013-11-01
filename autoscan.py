@@ -263,9 +263,6 @@ class Autoscan_iface(object):
                 return out
 
 
-if not os.geteuid() == 0:
-        sys.exit('must be root')
-
 # XXX all ifaces by default, use netifaces
 
 parser = argparse.ArgumentParser()
@@ -313,6 +310,9 @@ elif args.quiet:
 	loglevel = logging.WARN
 else:
 	loglevel = logging.INFO
+
+if not os.geteuid() == 0:
+        sys.exit('must be root')
 
 for iface in args.interfaces:
         if os.fork() == 0:
