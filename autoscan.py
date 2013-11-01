@@ -275,7 +275,7 @@ parser.add_argument("-m", "--monitor", action="store_true",
                         help="Mode monitor: Stay in the background and automaticaly run when interface turns up")
 parser.add_argument("-r", "--runnow", action="store_true",
                         help="Mode runnow (default): Run tests/scans now and exit")
-parser.add_argument("-f", "--background", action="store_true",
+parser.add_argument("-b", "--background", action="store_true",
                         help="Run in background for monitor mode, = daemonize")
 parser.add_argument("-o", "--outdir", action="store", default=".",
                         help="Use DIR as output directory")
