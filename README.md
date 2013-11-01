@@ -1,13 +1,14 @@
-autoscan - automatic fingerprint of visited networks
+## autoscan - automatic fingerprint of visited networks
 
 autscan remembers network parameters (addresses, dns...) and runs a basic
 fingerprinting (traceroute, scan) of the network you are connected to.
+
 It has 2 modes:
 * runnow: run the fingerprint on the specified interface
 * monitor: wait on the specified interface, and everytime you
 connect to a new network it will do the fingerprint
 
-Fingerprinting steps:
+##### Fingerprinting steps:
 _test_pcap
 	records a 15s PCAP in the background (tcpdump)
 _test_ifconfig
