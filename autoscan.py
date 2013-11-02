@@ -216,6 +216,8 @@ class Autoscan_iface(object):
 
     def _test_explor_scan(self):
         target = re.sub('\.[0-9]+$', '', self.found_ip4) + ".0/24" # XXX v6
+        for ext in ['xml', 'gnmap', 'nmap']:
+            self._store("explor_scan/localnet.%s" % ext)
         out, err, code = self._exec(
                 ['nmap', '-oA', self._storepath_get("explor_scan/localnet"), '-p', '21,22,23,445,80,443,8080,8081,8082,8083', target])
         self._store("explor_scan/out", out)
@@ -228,7 +230,7 @@ class Autoscan_iface(object):
         out, err = p.communicate()
         return out, err, p.returncode
 
-    def _store(self, suffix, txt):
+    def _store(self, suffix, txt = ''):
         name = self._storepath_get(suffix)
         logging.debug("%s = %s" % (name, txt))
         f = open(name, "w+")
